@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects, Javascript</title>
+</head>
+<body>
+<script type="text/javascript">
+	function cl( msg ) {
+		console.log( msg );
+	}
+
+
+	// var VideoGame = function(){
+	// 	this.name = "";
+	// 	this.version = "";
+	// 	this.dev = "";
+
+	// 	this.init = function( name, version, dev){
+	// 		this.name = name;
+	// 		this.version = version;
+	// 		this.dev = dev;
+	// 		return this;
+	// 	}
+	// 	this.play = function(){
+	// 		return "Play Game";
+	// 	}
+	// 	this.pause = function(){
+	// 		return "Pause Game";
+	// 	}
+	// }
+
+	var VideoGame = function(){
+		return {
+			
+			name:"",
+			version:"",
+			dev:"",
+
+			init:function(  name, version, dev ){
+				this.name = name;
+				this.version = version;
+				this.dev = dev;
+				return this;
+			},
+			play:function(){
+				return "Play Game";
+			},
+			pause:function(){
+				return "Pause Game";
+			}
+		};
+	}
+
+
+	var r = new VideoGame()
+			.init("Mario Kart",1.0,"Nintendo");	
+	var r2 = new VideoGame()
+			.init("Clash Royale",1.2,"SuperCell");
+					
+
+	cl( r  );
+	cl( r2 );
+	cl( r.play() );
+
+</script>
+</body>
+</html>
