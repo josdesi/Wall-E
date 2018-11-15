@@ -1,1 +1,1 @@
-// Hello World Angular JS
+// Hello world Angular JS demo.
