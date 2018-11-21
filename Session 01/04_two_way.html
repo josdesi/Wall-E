@@ -5,9 +5,11 @@
 	<script src="https://code.angularjs.org/1.7.5/angular.min.js"></script>
 </head>
 <body ng-app ng-init="name='World'">
-	<label> Name </label>
+	<label> First Name </label>
 	<input ng-model="name"/>
 	<span>Hello, {{ name }}!</span>
+	<p ng-bind="name"></p>
+	...
 	<p ng-bind="name"></p>
 </body>
 </html>
