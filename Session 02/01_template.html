@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJS Template</title>
+	<script src="https://code.angularjs.org/1.7.5/angular.min.js"></script>
+	<script type="text/javascript">
+		angular.module('app',[])
+			.component('helloWorld',{
+				template:'<span>Hello World AngularJS!... </span><br/>'
+			});
+	</script>
+</head>
+<body ng-app="app">
+	<hello-world></hello-world>
+	<hello-world></hello-world>
+	<hello-world></hello-world>
+	<hello-world></hello-world>
+	<hello-world></hello-world>
+</body>
+</html>
