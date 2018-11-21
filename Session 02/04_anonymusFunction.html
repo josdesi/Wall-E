@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJS Attributes</title>
+	<script src="https://code.angularjs.org/1.7.5/angular.min.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+	var formattedAddress = "Calle Rufino Tamayo, Lote 1 Manzana 8, Conjunto Cutzamala, 55787, Tonanitlán, Méx., México";
+	var word = "lote";
+	var res = ( function( str, find ){
+		
+		str = str.toLowerCase();
+		var list = str.split(",");
+
+		for( var i in list ){
+			var ref = list[ i ];
+			if( ref.indexOf( find ) != -1 )
+				return ref;
+		}
+
+	})( formattedAddress, word );
+
+	alert( res );
+</script>
+</body>
+</html>
