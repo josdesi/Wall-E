@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>AngularJS Consume Rest by GET</title>
+	<script src="https://code.angularjs.org/1.7.5/angular.min.js"></script>
+	<script type="text/javascript">
+		angular.module('demo',[])
+			.controller('Hello', function( $scope, $http ) {
+				$http.get('http://rest-service.guides.spring.io/greeting').
+					then( function( response ){						
+						$scope.greeting = response.data;
+					});
+			});			
+	</script>
+</head>
+<body>
+	<div ng-controller="Hello">
+		<p>Id: {{ greeting.id }}</p>
+		<p>Content: {{ greeting.content }}</p>
+	</div>
+</body>
+</html>
