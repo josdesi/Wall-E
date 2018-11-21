@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJS Attributes</title>
+	<script src="https://code.angularjs.org/1.7.5/angular.min.js"></script>
+	<script type="text/javascript">
+		angular.module('myApp',[])
+			.directive('elementDirective', function( $log ){
+				return {
+					template:'<p>My template!</p>',
+					link:function( scope, el, attrs ){
+						$log.log( scope );
+						$log.log( el.html() );
+						$log.log( attrs.someAttr );
+					}
+				};
+			});
+	</script>
+</head>
+<body ng-app="myApp">
+
+	<element-directive some-attr="myvalue"></element-directive>
+
+</body>
+</html>
