@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJS Repeat & Directive</title>
+	<script src="https://code.angularjs.org/1.7.5/angular.min.js"></script>
+	<script type="text/javascript">
+		angular.module('myApp',[])
+			.directive('myDirective', function(){
+				return {
+					templateUrl:'my-template.html'
+				};
+			});
+	</script>
+</head>
+<body ng-app="myApp">
+
+	<script type="text/ng-template" id="my-template.html">
+		<div ng-repeat="num in [1,2,3,4,5]"> {{ num }} </div>
+	</script>
+
+	<my-directive></my-directive>
+	---
+	<my-directive></my-directive>
+	---
+	<my-directive></my-directive>
+</body>
+</html>
